@@ -4,22 +4,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
     <title>Web Push Notification Learning</title>
+
+    <style>
+        body {
+            font-family: Helvetica, sans-serif;
+            color: #333;
+        }
+
+        .wrapper {
+            max-width: 780px;
+            padding: 0 20px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2.625rem;
+            color: deepskyblue;
+        }
+
+        em {
+            color: deeppink;
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            padding-top: 10px;
+            border-top: 1px solid #ccc;
+            font-size: .875rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer a {
+            color: #333;
+        }
+
+        footer a:hover {
+            color: #ff69b4;
+        }
+    </style>
 
     <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
 
     <script>
         window.OneSignal = window.OneSignal || [];
-            OneSignal.push(function() {
-                OneSignal.init({
+        OneSignal.push(function() {
+            OneSignal.init({
                 appId: "84e1510a-084d-4a1c-9615-a575f356d6b6",
             });
         });
     </script>
 </head>
 <body>
-    <h1>Web Push Notification Learning</h1>
-
-    <p>In about 5 seconds you'll be asked to subscribe to this web site for push notifications</p>
+    <div class="wrapper">
+        <header>
+            <h1>Web Push Notification Learning</h1>
+        </header>
+        
+        <main>        
+            <p>In about 5 seconds you'll be asked to subscribe to this web site for <em>push notifications</em></p>
+        </main>
+        
+        <footer>
+            <p>&copy; By Dennis Burger, March 2023</p>
+            <p><a href="https://github.com/dutchwebworks/web-push-notification-learning" target="_blank">View on Github</a></p>
+        </footer>
+    </div>
 </body>
 </html>
