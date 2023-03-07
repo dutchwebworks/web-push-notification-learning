@@ -13,6 +13,7 @@
         body {
             font-family: Helvetica, sans-serif;
             color: #333;
+            margin: 0;
         }
 
         .wrapper {
@@ -56,6 +57,21 @@
         footer a:hover {
             color: #ff69b4;
         }
+
+        #push-alert {
+            background-color: yellow;
+            color: #444;
+            font-size: 1rem;
+            position: sticky;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 10px 0;
+            margin-bottom: 50px;
+            text-align: center;            
+            text-transform: uppercase;
+            font-weight: 700;
+        }
     </style>
 
     <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
@@ -66,10 +82,12 @@
             OneSignal.init({
                 appId: "84e1510a-084d-4a1c-9615-a575f356d6b6",
             });
-        });
+        });        
     </script>
 </head>
 <body>
+    <div id="push-alert" hidden>Your web browser doesn't support push notifications</div>
+
     <div class="wrapper">
         <header>
             <h1>Web Push Notification Learning</h1>
@@ -88,5 +106,12 @@
             <p><a href="https://github.com/dutchwebworks/web-push-notification-learning" target="_blank">View on Github</a></p>
         </footer>
     </div>
+
+    <script>
+        // Check if push is supported
+        if(!"serviceWorker" in navigator && !"PushManager" in window) {
+            document.getElementById("push-alert").removeAttribute("hidden");
+        }
+    </script>
 </body>
 </html>
