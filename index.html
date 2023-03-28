@@ -5,76 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
     <title>Web Push Notification Learning</title>
 
-    <style>
-        body {
-            font-family: Helvetica, sans-serif;
-            color: #333;
-            margin: 0;
-        }
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-        .wrapper {
-            max-width: 780px;
-            padding: 0 20px;
-            margin: 0 auto;
-        }
+    <link href="/css/style.css" rel="stylesheet">
 
-        h1 {
-            font-size: 2.625rem;
-            color: deepskyblue;
-        }
+    <link href="/app.webmanifest" rel="manifest">
 
-        h2 {
-            font-size: 1rem;
-            color: deeppink;
-            margin-top: 60px;
-        }
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>    
 
-        em {
-            color: deeppink;
-        }
+    <link rel="apple-touch-icon" sizes="192x192" href="/img/icons/icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/img/icons/icon-48x48.png">
 
-        footer {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 30px;
-            padding-top: 10px;
-            border-top: 1px solid #ccc;
-            font-size: .875rem;
-        }
-
-        footer p {
-            margin: 0;
-        }
-
-        footer a {
-            color: #333;
-        }
-
-        footer a:hover {
-            color: #ff69b4;
-        }
-
-        #push-alert {
-            background-color: yellow;
-            color: #444;
-            font-size: 1rem;
-            position: sticky;
-            top: 0;
-            left: 0;
-            right: 0;
-            padding: 10px 0;
-            margin-bottom: 50px;
-            text-align: center;            
-            text-transform: uppercase;
-            font-weight: 700;
-        }
-    </style>
-
-    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
+    <meta name="msapplication-TileColor" content="#da532c">
+    
+    <meta name="theme-color" content="#ffffff">
 
     <script>
         window.OneSignal = window.OneSignal || [];
